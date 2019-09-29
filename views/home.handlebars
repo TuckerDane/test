@@ -1,0 +1,59 @@
+<div data-spy="scroll" data-target=".nav">
+
+	<div class="centerImage" style="background-image: url({{img}})"></div>
+	<div class="nav">
+		<ul>
+			{{#each bodyList}}
+		   	 	<li><a href="#{{this.name}}">{{this.name}}</a></li>
+		 	{{/each}}
+		</ul>
+	</div>
+
+	<div style="margin-top:20px">
+	<div class="void" id="{{bodyList.0.name}}">
+		<h1>{{bodyList.0.name}}</h1>
+		<div class="projectCards">
+		{{#each bodyList.0.content}}
+		<a href={{this.link}} class="aboutCard">
+			<img class="projectImage" src="{{this.picture}}" style="float: left; margin-right: 15px">
+			{{this.description}}
+		</a>
+		{{/each}}
+		</div>
+	</div>
+	<div class="floatbox" id="{{bodyList.1.name}}">
+		<h1>{{bodyList.1.name}}</h1>
+		<div class="projectCards">
+		{{#each bodyList.1.content}}
+		<a href={{this.link}} class="projectCard">
+			<h2>{{this.title}}</h2>
+			<p>{{this.description}}</p>
+			<img src="{{this.image}}" class="projectImage">
+		</a>
+		{{/each}}
+		</div>
+	</div>
+	<div class="void" id="{{bodyList.2.name}}">
+		<h1>{{bodyList.2.name}}</h1>
+		<div class="projectCards">
+		{{#each bodyList.2.content}}
+		<divclass="projectCard">
+			<h2>{{this.title}}</h2>
+			<p>{{this.description}}</p>
+			<iframe style="border-radius:15px" width="854" height="480" src="{{this.video}}" frameborder="0" gesture="media" allowfullscreen></iframe>
+		</div>
+		{{/each}}
+		</div>
+	</div>
+	<div class="floatbox" id="{{bodyList.3.name}}" style="color: black;">
+		<h1 style="color:white">{{bodyList.3.name}}</h1>
+		<form action="" method="post">
+			<div>
+			<textarea name="email" id="email" style="font-family:helvetica  text-align:left"  cols="45">
+			Send me a message!
+			</textarea>
+			</div>
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+</div>
